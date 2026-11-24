@@ -15,3 +15,25 @@ ingredientes_plato_2 = [
     "tomate", "cebolla", "aceite de oliva", "sal", "pan",
     "ajo", "pepino", "vinagre", "sal",   # "sal" repetida a propósito
 ]
+
+
+def ingredientes_totales(lista1, lista2):
+    conjunto1 = set(lista1)
+    conjunto2 = set(lista2)
+    
+    todo = conjunto1.union(conjunto2)
+    
+    return todo
+
+todo = ingredientes_totales(ingredientes_plato_1, ingredientes_plato_2)
+#print(todo)
+
+
+def lista_alfabetica(lista1, lista2):
+    c1 = set(lista1)
+    c2 = set(lista2)
+    comun = c1.intersection(c2)
+    return sorted(comun)
+
+
+print(lista_alfabetica(ingredientes_plato_1, ingredientes_plato_2))
